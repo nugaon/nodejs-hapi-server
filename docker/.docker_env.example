@@ -1,0 +1,7 @@
+SA_PASSWORD=DjCement2007
+ACCEPT_EULA=Y
+MYSQL_ROOT_PASSWORD=nodejs-hapi-testpass
+MYSQL_DATABASE=nodejs-hapi
+PMA_HOST=database
+REDIS_HOST=redis
+env=dev
