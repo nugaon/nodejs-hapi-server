@@ -1,4 +1,4 @@
-import { ServerRoute } from "hapi";
+import { ServerRoute } from "@hapi/hapi";
 import { injectable } from "inversify";
 import { Routes } from "../generic/Routes";
 import { ApiController } from "./ApiController";

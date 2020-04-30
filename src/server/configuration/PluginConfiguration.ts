@@ -1,6 +1,6 @@
 import * as hapiSwagger from "hapi-swagger";
-import * as Inert from "inert";
-import * as Vision from "vision";
+import { default as Inert } from "@hapi/inert";
+import * as Vision from "@hapi/vision";
 import * as hapiAuthCookie from "hapi-auth-cookie";
 import pjson from "../../../package.json";
 
@@ -12,11 +12,11 @@ interface PluginLike {
 export class PluginConfiguration {
     public getConfiguration(): PluginLike[] {
         const plugins: PluginLike[] = [];
-        if (process.env.ENV === 'production') {
+        if (process.env.ENV !== 'production') {
             plugins.push(
-                {
-                    plugin: hapiAuthCookie
-                },
+                // {
+                //     plugin: hapiAuthCookie
+                // },
                 {
                     plugin: Inert
                 },
@@ -35,11 +35,7 @@ export class PluginConfiguration {
                             }
                         },
                         basePath: "/",
-                        documentationPath: "/documentation",
-                        payloadType: "json",
-                        grouping: "tags",
-                        tagsGroupingFilter: (tag: string): boolean => !["api", "v1", "filter", "search", "list"]
-                            .some((e: string) => e === tag)
+                        documentationPath: "/documentation"
                     }
                 }
             );

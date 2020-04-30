@@ -1,4 +1,4 @@
-import { ServerOptions } from "hapi";
+import { ServerOptions } from "@hapi/hapi";
 import { Logger } from "../../engine/components/Logger";
 import { environment } from "../../environments/environment";
 

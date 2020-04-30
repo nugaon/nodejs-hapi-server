@@ -1,5 +1,5 @@
 import { injectable } from "inversify";
-import * as Joi from "joi";
+import { default as Joi } from "@hapi/joi";
 
 @injectable()
 export class ApiValidator {
@@ -8,7 +8,9 @@ export class ApiValidator {
 
     public getSmth() {
         return {
-            payload: Joi.object()
+            payload: Joi.object({
+              id: Joi.number().description('smth')
+            })
         };
     }
 }

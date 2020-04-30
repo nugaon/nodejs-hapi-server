@@ -46,4 +46,8 @@ and its calling statements.
 
 The application uses the following environment variables:
  * ENV # has to be 'production' or 'development'
-  
+
+# Documentation
+
+For the API documentation the hapi's * * swagger * * plugin makes auto-generated
+interactive descriptions.
